@@ -1,11 +1,8 @@
 package se.yrgo.services.customers;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
-import se.yrgo.domain.Call;
-import se.yrgo.domain.Customer;
+import se.yrgo.domain.*;
 
 public class CustomerManagementMockImpl implements CustomerManagementService {
 	private HashMap<String,Customer> customerMap;

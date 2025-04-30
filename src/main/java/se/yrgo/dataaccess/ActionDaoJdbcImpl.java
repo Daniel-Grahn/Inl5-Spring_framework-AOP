@@ -1,13 +1,10 @@
 package se.yrgo.dataaccess;
 
+import java.sql.*;
 import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.List;
+import java.util.*;
 
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.*;
 
 import se.yrgo.domain.Action;
 

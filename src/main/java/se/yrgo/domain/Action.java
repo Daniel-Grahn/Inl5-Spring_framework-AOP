@@ -1,30 +1,19 @@
 package se.yrgo.domain;
 
-import java.util.Calendar;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.*;
+import javax.persistence.*;
 
 @Entity
 public class Action {
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int actionId;
 
-
 	private String details;
-
-
 	private Calendar requiredBy;
-
-
 	private String owningUser;
-
-
 	private boolean complete;
-
 
 	public Action(String details, Calendar requiredBy, String owningUser){
 		this.details = details;

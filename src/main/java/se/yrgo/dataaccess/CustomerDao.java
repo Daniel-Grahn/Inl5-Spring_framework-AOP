@@ -2,8 +2,7 @@ package se.yrgo.dataaccess;
 
 import java.util.List;
 
-import se.yrgo.domain.Call;
-import se.yrgo.domain.Customer;
+import se.yrgo.domain.*;
 
 public interface CustomerDao {
 
@@ -19,9 +18,7 @@ public interface CustomerDao {
 
 	public List<Customer> getAllCustomers();
 
-
 	public Customer getFullCustomerDetail(String customerId) throws RecordNotFoundException;
-
 
 	public void addCall (Call newCall, String customerId) throws RecordNotFoundException;
 }

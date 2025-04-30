@@ -1,38 +1,28 @@
 package se.yrgo.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import java.util.*;
+import javax.persistence.*;
 
 @Entity
 public class Customer {
-
 	@Id
 	private String customerId;
-
+	
 	private String companyName;
-
 	private String email;
-
 	private String telephone;
-
 	private String notes;
 
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Call> calls;
 
-	public Customer(String customerId, String companyName, String email,
-			             String telephone, String notes) {
+	public Customer(String customerId, String companyName, String email, String telephone, String notes) {
 		this(customerId, companyName, notes);
 		this.email = email;
 		this.telephone = telephone;
 	}
 
-	public Customer(String customerId, String companyName, String notes){
+	public Customer(String customerId, String companyName, String notes) {
 		this.customerId = customerId;
 		this.companyName = companyName;
 		this.notes = notes;
@@ -43,9 +33,8 @@ public class Customer {
 		this.calls.add(callDetails);
 	}
 
-
-	public String toString(){
-		return this.customerId + ": " + this.companyName ;
+	public String toString() {
+		return this.customerId + ": " + this.companyName;
 	}
 
 	public String getCustomerId() {
@@ -97,5 +86,6 @@ public class Customer {
 	}
 
 	// needed for JPA - ignore until then
-	public Customer() {}
+	public Customer() {
+	}
 }
