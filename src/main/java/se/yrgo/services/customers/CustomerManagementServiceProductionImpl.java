@@ -2,7 +2,7 @@ package se.yrgo.services.customers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 
 import se.yrgo.dataaccess.*;
 import se.yrgo.domain.*;
